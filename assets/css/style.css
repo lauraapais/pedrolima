@@ -71,7 +71,7 @@ main {
 
 
 /* Header */
-header{
+header {
   position: fixed;
   top: var(--marginDesktop);
   z-index: 901;
@@ -86,10 +86,11 @@ header{
   grid-column: 3 / span 2;
 }
 
-.menuContainer{
+.menuContainer {
   grid-column: 12 / span 1;
   display: flex;
   justify-content: flex-end;
+  z-index: 999;
 }
 
 
@@ -134,47 +135,45 @@ header{
 
 
 /*Contact*/
-.contactInfo{
-    grid-column: 3 / span 5;
+.contactInfo {
+  grid-column: 3 / span 5;
 }
 
-.socialMedia{
-    grid-column: 9 / span 2;
+.socialMedia {
+  grid-column: 9 / span 2;
 }
 
-.socialMedia h1{
-    width: max-content;
+.socialMedia h1 {
+  width: max-content;
 }
 
 /*Menu*/
-.menuSelect{
-  transform: rotate(-10deg);
-
+.menuSelect {
+  rotate: 0;
+  transform: rotate ease 800ms;
 }
-#menu{
-  position: absolute;
+
+#menu.open .menuSelect {
+  rotate: -10deg;
+}
+
+#menu {
+  position: fixed;
   top: 0;
   left: 0;
   width: calc(100vw - var(--marginDesktop)*2);
   height: calc(100vh - var(--marginDesktop)*2);
   padding: var(--marginDesktop);
-}
-
-#menu {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
-  display: block; /* This needs to be block to allow the transition */
+  pointer-events: none;
 }
 
 #menu.open {
-  opacity: 1;
-  visibility: visible;
+  pointer-events: all;
 }
 
 .menuBackground {
-  transition: opacity 0.32s cubic-bezier(.4,0,.6,1) 80ms, visibility 0.32s step-end 80ms;
-  background: rgba(232, 232, 237, 0.1);
+  transition: opacity ease 800ms, visibility ease 800ms;
+  background: rgba(232, 232, 237, 0.4);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   visibility: hidden;
@@ -189,9 +188,7 @@ header{
   z-index: 900;
 }
 
-.menuBackground.open {
-  transition: opacity 0.32s cubic-bezier(.4,0,.6,1) 80ms, visibility 0.32s step-end 80ms;
-
+#menu.open .menuBackground {
   visibility: visible;
   opacity: 1;
 }
@@ -199,71 +196,97 @@ header{
 .menuContent {
   position: relative;
   z-index: 901;
+  top: 0;
+  translate: 0, 0;
+  width: calc(100% - var(--marginDesktop)* 2);
+  transition: top ease 800ms, translate ease 800ms;
 }
 
-.menuHeader{
+.menuHeader {
   grid-column: 3 / span 3;
   display: flex;
-      gap: var(--marginDesktop);
-      flex-direction: column;
+  gap: var(--marginDesktop);
+  flex-direction: column;
 }
 
-.menuHeader h1{
-  width:max-content;
+.menuHeader h1 {
+  width: max-content;
 }
 
-.menuContent{
-  position: absolute;
+#menu.open .menuContent {
   top: 50%;
-  transform: translate(0, -50%);
+  translate: 0, -50%;
+  /*transform: translate(0, -50%);*/
   z-index: 901;
-  width: calc(100% - var(--marginDesktop)* 2);
 }
 
-.language{
+.language {
   position: absolute;
   display: flex;
   gap: calc(var(--marginDesktop) / 4);
   bottom: var(--marginDesktop);
   right: var(--marginDesktop);
   z-index: 901;
+  opacity: 0;
+  transition: opacity ease 800ms;
+}
+
+#menu.open .language {
+  opacity: 1;
 }
 
 /*Agenda*/
-.agendaFilters{
+.agendaFilters {
   position: fixed;
 }
 
-.agendaItems{
+.agendaItems {
   margin-top: calc(15px + 0.390625vw);
 }
-.dateAgenda{
+
+.dateAgenda {
   grid-column: 3 / span 2;
 }
-.projectAgenda{
+
+.projectAgenda {
   grid-column: 5 / span 4;
 }
-.locationAgenda{
+
+.locationAgenda {
   grid-column: 9 / span 3;
 }
 
-.categoryAgenda{
+.categoryAgenda {
   grid-column: 12 / span 1;
 }
 
 @media only screen and (max-width: 700px) {
-    /* Header */
-.headerLogo {
+
+  /* Header */
+  .headerLogo {
     grid-column: 1 / span 4;
   }
-  
+
   .navSelect {
     display: none;
   }
-  
+
   .menuContainer {
     grid-column: 12 / span 4;
-      width: max-content;
+    width: max-content;
   }
-  
+
+}
+
+/* MENU FABIO */
+
+.menuHeader h1:not(.menuSelect) {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height ease 800ms;
+}
+
+#menu.open .menuHeader h1:not(.menuSelect) {
+  max-height: 100%;
+  overflow: hidden;
 }
