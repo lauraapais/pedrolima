@@ -65,7 +65,6 @@ main {
 }
 
 .rot:hover {
-  
   transform: rotate(-10deg);
   transition: all 0.5s ease;
 }
@@ -147,6 +146,10 @@ header{
 }
 
 /*Menu*/
+.menuSelect{
+  transform: rotate(-10deg);
+
+}
 #menu{
   position: absolute;
   top: 0;
