@@ -1,0 +1,158 @@
+:root {
+  --bg-color: #ffffff;
+  --black: #000000;
+
+  --marginDesktop: 2vw;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Text Pro";
+  src: url("folder/data/font/Neue_Haas_Grotesk_Text_Pro.otf") format("opentype");
+  font-weight: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--black);
+  font-family: "Neue Haas Grotesk Text Pro", sans-serif;
+  font-weight: normal;
+  margin: var(--marginDesktop);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: calc(var(--marginDesktop) / 2);
+}
+
+h1 {
+  font-size: calc(11px + 0.390625vw);
+  line-height: calc(11px + 0.390625vw);
+  font-family: "Neue Haas Grotesk Text Pro", sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: calc(11px + 0.390625vw);
+  line-height: calc(15px + 0.390625vw);
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.alignRight {
+  display: flex;
+  justify-content: flex-end;
+}
+
+main {
+  margin-top: calc(100vh / 6);
+}
+
+.rot {
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.rot:hover {
+  
+  transform: rotate(-10deg);
+  transition: all 0.5s ease;
+}
+
+
+/* Header */
+.headerLogo {
+  grid-column: 1 / span 2;
+}
+
+.navSelect {
+  grid-column: 3 / span 2;
+}
+
+.menu {
+  grid-column: 12 / span 1;
+    width: max-content;
+}
+
+/*About*/
+.aboutInfo {
+  grid-column: 3 / span 6;
+}
+
+.aboutContainer {
+  margin-top: calc(100vh / 6);
+}
+
+.imageAbout-main {
+  grid-column: 3 / span 6;
+}
+
+.imageAbout-main img {
+  width: 100%;
+}
+
+.aboutImageContainer:first-child {
+  grid-column: 3;
+}
+
+.imageAbout_description {
+  grid-column: span 3;
+  display: flex;
+  align-items: flex-end;
+}
+
+.gapAbout {
+  grid-column: span 2;
+}
+
+.imageAbout {
+  grid-column: span 5;
+}
+
+.imageAbout img {
+  width: 100%;
+}
+
+
+/*Contact*/
+.contactInfo{
+    grid-column: 3 / span 5;
+}
+
+.socialMedia{
+    grid-column: 9 / span 2;
+}
+
+.socialMedia h1{
+    width: max-content;
+}
+
+
+
+@media only screen and (max-width: 700px) {
+    /* Header */
+.headerLogo {
+    grid-column: 1 / span 4;
+  }
+  
+  .navSelect {
+    display: none;
+  }
+  
+  .menu {
+    grid-column: 12 / span 4;
+      width: max-content;
+  }
+  
+}
