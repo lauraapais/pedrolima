@@ -75,6 +75,7 @@ header{
   position: fixed;
   top: var(--marginDesktop);
   z-index: 901;
+  width: calc(100% - var(--marginDesktop)* 2);
 }
 
 .headerLogo {
