@@ -149,8 +149,8 @@ header {
 
 /*Menu*/
 .menuSelect {
-  rotate: 0;
-  transform: rotate ease 800ms;
+  rotate: 0deg;
+  transition: rotate ease 800ms;
 }
 
 #menu.open .menuSelect {
