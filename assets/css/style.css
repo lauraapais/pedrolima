@@ -72,6 +72,12 @@ main {
 
 
 /* Header */
+header{
+  position: fixed;
+  top: var(--marginDesktop);
+  z-index: 901;
+}
+
 .headerLogo {
   grid-column: 1 / span 2;
 }
@@ -80,10 +86,12 @@ main {
   grid-column: 3 / span 2;
 }
 
-.menu {
+.menuContainer{
   grid-column: 12 / span 1;
-    width: max-content;
+  display: flex;
+  justify-content: flex-end;
 }
+
 
 /*About*/
 .aboutInfo {
@@ -138,7 +146,77 @@ main {
     width: max-content;
 }
 
+/*Menu*/
+#menu{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100vw - var(--marginDesktop)*2);
+  height: calc(100vh - var(--marginDesktop)*2);
+  padding: var(--marginDesktop);
+}
 
+#menu {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: none; 
+}
+
+#menu.open {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  display: block; 
+}
+
+.menuBackground {
+
+  background: rgba(232, 232, 237, .1);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    visibility: visible;
+    position: fixed;
+    opacity: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 900;
+}
+
+.menuContent {
+  position: relative;
+  z-index: 901;
+}
+
+.menuHeader{
+  grid-column: 3 / span 3;
+  display: flex;
+      gap: var(--marginDesktop);
+      flex-direction: column;
+}
+
+.menuHeader h1{
+  width:max-content;
+}
+
+.menuContent{
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 901;
+  width: calc(100% - var(--marginDesktop)* 2);
+}
+
+.language{
+  position: absolute;
+  display: flex;
+  gap: calc(var(--marginDesktop) / 4);
+  bottom: var(--marginDesktop);
+  right: var(--marginDesktop);
+  z-index: 901;
+}
 
 @media only screen and (max-width: 700px) {
     /* Header */
@@ -150,7 +228,7 @@ main {
     display: none;
   }
   
-  .menu {
+  .menuContainer {
     grid-column: 12 / span 4;
       width: max-content;
   }
