@@ -1,7 +1,7 @@
 :root {
   --bg-color: #ffffff;
   --black: #000000;
-  --grey: #B3B3B3;
+  --grey: #b3b3b3;
 
   --marginDesktop: 2vw;
 }
@@ -11,7 +11,7 @@
   src: url("folder/data/font/Neue_Haas_Grotesk_Text_Pro.otf") format("opentype");
   font-weight: normal;
 }
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
 * {
   margin: 0;
@@ -52,7 +52,7 @@ a {
   cursor: pointer;
 }
 
-.mono{
+.mono {
   font-family: "Roboto Mono", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -78,13 +78,12 @@ main {
   transition: all 0.5s ease;
 }
 
-
 /* Header */
 header {
   position: fixed;
   top: var(--marginDesktop);
   z-index: 901;
-  width: calc(100% - var(--marginDesktop)* 2);
+  width: calc(100% - var(--marginDesktop) * 2);
 }
 
 .headerLogo {
@@ -101,7 +100,6 @@ header {
   justify-content: flex-end;
   z-index: 999;
 }
-
 
 /*About*/
 .aboutInfo {
@@ -142,7 +140,6 @@ header {
   width: 100%;
 }
 
-
 /*Contact*/
 .contactInfo {
   grid-column: 3 / span 5;
@@ -170,8 +167,8 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: calc(100vw - var(--marginDesktop)*2);
-  height: calc(100vh - var(--marginDesktop)*2);
+  width: calc(100vw - var(--marginDesktop) * 2);
+  height: calc(100vh - var(--marginDesktop) * 2);
   padding: var(--marginDesktop);
   pointer-events: none;
 }
@@ -207,7 +204,7 @@ header {
   z-index: 901;
   top: 0;
   translate: 0, 0;
-  width: calc(100% - var(--marginDesktop)* 2);
+  width: calc(100% - var(--marginDesktop) * 2);
   transition: top ease 800ms, translate ease 800ms;
 }
 
@@ -269,142 +266,166 @@ header {
   grid-column: 12 / span 1;
 }
 
-
 /*Selected Work*/
-.projectWork{
+.projectWork {
   grid-column: 3 / span 5;
 }
 
-.categoryWork{
+.categoryWork {
   grid-column: 8 / span 3;
 }
 
-.durationWork{
+.durationWork {
   grid-column: 11 / span 1;
 }
 
-.yearWork{
+.yearWork {
   grid-column: 12 / span 1;
 }
 
-.gapGrid{
+.gapGrid {
   grid-column: 1 / span 11;
 }
 
-
-.workMain{
+.workMain {
   grid-column: 3 / span 6;
 }
-.workDescription{
+.workDescription {
   grid-column: 10 / span 3;
 }
 
-.mainImage img{
-width:100%;
-margin-top: calc(100vh / 6);
+.mainImage img {
+  width: 100%;
+  margin-top: calc(100vh / 6);
 }
 
-.imageWork{
+.imageWork {
   grid-column: 8 / span 5;
   margin-top: calc(100vh / 12);
 }
 
-.imageWork img{
-  width:100%;
+.imageWork img {
+  width: 100%;
 }
 
-.fixedWork{
+.fixedWork {
   grid-column: 1 / span 2;
   position: fixed;
   z-index: -1;
 }
 
-.fixedAudio{
+.fixedAudio {
   grid-column: 1 / span 2;
   position: fixed;
-  width:calc( (100vw - var(--marginDesktop)*2) / 12 * 2 - (var(--marginDesktop) / 2));
+  width: calc(
+    (100vw - var(--marginDesktop) * 2) / 12 * 2 - (var(--marginDesktop) / 2)
+  );
   bottom: var(--marginDesktop);
   display: flex;
-    justify-content: space-between;
-    z-index: -1;
+  justify-content: space-between;
+  z-index: -1;
 }
 
-.fixedAudio h1{
+.fixedAudio h1 {
   width: max-content;
 }
 
-.creditPhotoWork{
+.creditPhotoWork {
   display: flex;
   justify-content: flex-end;
   margin-top: calc(15px + 0.390625vw);
 }
 
+.grid.agendaItems:hover .itemImage img {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.itemImage img {
+  width: 100%;
+  opacity: 0;
+}
+
+.itemImage {
+  position: absolute;
+  width: calc(
+    (100vw - var(--marginDesktop) * 2) / 12 * 3 - (var(--marginDesktop))
+  );
+  left: calc(
+    (100vw - var(--marginDesktop) * 2) / 12 * 5 - (var(--marginDesktop))
+  );
+}
 
 /*Discography*/
-.discographyImage{
-position: absolute;
-width: calc( (100vw - var(--marginDesktop)*2) / 12 * 3 - (var(--marginDesktop)));
+.discographyImage {
+  position: absolute;
+  width: calc(
+    (100vw - var(--marginDesktop) * 2) / 12 * 3 - (var(--marginDesktop))
+  );
 }
 
-.discographyImage img{
-  width:100%;
+.discographyImage img {
+  width: 100%;
 }
 
-.projectDiscography{
+.projectDiscography {
   grid-column: 3 / span 4;
 }
 
-.typeDiscography{
+.typeDiscography {
   grid-column: 7 / span 2;
 }
 
-.categoryDiscography{
+.categoryDiscography {
   grid-column: 9 / span 2;
 }
 
-.formatDiscography{
+.formatDiscography {
   grid-column: 11 / span 1;
 }
 
-.yearDiscography{
+.yearDiscography {
   grid-column: 12 / span 1;
 }
 
-.discographyMain{
+.discographyMain {
   grid-column: 3 / span 4;
 }
-.track{
+.track {
   margin-bottom: calc(15px + 0.390625vw);
 }
 
-.discoTitle{
+.discoTitle {
   margin-bottom: calc((15px + 0.390625vw) * 2);
 }
 
-.listen, .shop{
+.listen,
+.shop {
   margin-top: calc(100vh / 12);
 }
 
-.listen{
+.listen {
   grid-column: 3 / span 1;
 }
 
-.shop{
+.shop {
   grid-column: 4 / span 1;
 }
 
-.imageDisco{
-  width: calc( (100vw - var(--marginDesktop)*2) / 12 * 4 - (var(--marginDesktop)));
+.imageDisco {
+  width: calc(
+    (100vw - var(--marginDesktop) * 2) / 12 * 4 - (var(--marginDesktop))
+  );
   position: absolute;
   bottom: var(--marginDesktop);
   right: var(--marginDesktop);
 }
 
-.imageDisco img{
-  width:100%;
+.imageDisco img {
+  width: 100%;
 }
 
-.agendaItems:hover{
+.agendaItems:hover {
   color: var(--grey);
   cursor: pointer;
 }
@@ -423,7 +444,6 @@ width: calc( (100vw - var(--marginDesktop)*2) / 12 * 3 - (var(--marginDesktop)))
     grid-column: 12 / span 4;
     width: max-content;
   }
-
 }
 
 /* MENU FABIO */
