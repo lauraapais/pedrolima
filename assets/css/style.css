@@ -341,6 +341,15 @@ margin-top: calc(100vh / 6);
 
 
 /*Discography*/
+.discographyImage{
+position: absolute;
+width: calc( (100vw - var(--marginDesktop)*2) / 12 * 3 - (var(--marginDesktop)));
+}
+
+.discographyImage img{
+  width:100%;
+}
+
 .projectDiscography{
   grid-column: 3 / span 4;
 }
