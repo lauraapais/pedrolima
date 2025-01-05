@@ -154,12 +154,13 @@ header {
 }
 
 /*Menu*/
-.menuSelect {
+.menuSelectHeader {
   rotate: 0deg;
   transition: rotate ease 800ms;
 }
 
-#menu.open .menuSelect {
+
+#menu.open .menuSelectHeader {
   rotate: -10deg;
 }
 
@@ -204,15 +205,22 @@ header {
   z-index: 901;
   top: 0;
   translate: 0, 0;
-  width: calc(100% - var(--marginDesktop) * 2);
+  width: 100%;
   transition: top ease 800ms, translate ease 800ms;
 }
 
 .menuHeader {
   grid-column: 3 / span 3;
+
+
   display: flex;
-  gap: var(--marginDesktop);
   flex-direction: column;
+  gap: 0;
+  transition: gap ease 800ms;
+}
+
+#menu.open .menuHeader {
+  gap: var(--marginDesktop);
 }
 
 .menuHeader h1 {
@@ -342,18 +350,29 @@ header {
 }
 
 .itemImage img {
+  transition: opacity 0.5s ease;
+
   width: 100%;
   opacity: 0;
 }
 
 .itemImage {
   position: absolute;
-  width: calc(
-    (100vw - var(--marginDesktop) * 2) / 12 * 3 - (var(--marginDesktop))
-  );
-  left: calc(
-    (100vw - var(--marginDesktop) * 2) / 12 * 5 - (var(--marginDesktop))
-  );
+  transform-origin: center;
+  transform: translate(0, -50%);
+  pointer-events: none;
+}
+
+.itemImage img{
+  grid-column: 5 / span 3;
+  width:100%;
+}
+
+.gridInside{
+  width: calc(100% - var(--marginDesktop) * 2);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: calc(var(--marginDesktop) / 2);
 }
 
 /*Discography*/
@@ -413,15 +432,13 @@ header {
 }
 
 .imageDisco {
-  width: calc(
-    (100vw - var(--marginDesktop) * 2) / 12 * 4 - (var(--marginDesktop))
-  );
   position: absolute;
   bottom: var(--marginDesktop);
   right: var(--marginDesktop);
 }
 
 .imageDisco img {
+  grid-column: 9 / span 4;
   width: 100%;
 }
 
