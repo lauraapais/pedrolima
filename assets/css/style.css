@@ -159,6 +159,15 @@ header {
   transition: rotate ease 800ms;
 }
 
+.navSelect{
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+#menu.open .navSelect {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
 
 #menu.open .menuSelectHeader {
   rotate: -10deg;
@@ -433,6 +442,7 @@ header {
 
 .imageDisco {
   position: absolute;
+  z-index: -1;
   bottom: var(--marginDesktop);
   right: var(--marginDesktop);
 }

@@ -55,10 +55,14 @@
                 <h1>Back</h1>
             </div>
             <div class="fixedAudio">
-                <h1 class="mono">00:00</h1>
-                <h1 class="mono">Play</h1>
-                <h1 class="mono">06:08</h1>
+                <h1 id="currentTime" class="mono">00:00</h1>
+                <h1 id="playButton" class="mono">Play</h1>
+                <h1 id="audioTime" class="mono">06:08</h1>
+                <audio id="audioWork">
+                    <source src="assets/data/music/DANCE_SUITE.mp3" type="audio/mpeg">
+                </audio>
             </div>
+            
         </div>
         <div class="grid">
             <div class="workMain">
@@ -121,10 +125,10 @@
                     Premiered at Fundação Calouste
                     Gulbenkian / (Lisboa) with Orquestra
                     Gulbenkian
-                    </p>
-                    <p><br></p>
-                    <p>Cast</p>
-                    <p>
+                </p>
+                <p><br></p>
+                <p>Cast</p>
+                <p>
                     Penelope: Carla Simões (soprano)
                     <br>
                     <br>
@@ -144,7 +148,7 @@
                     <br>
                     <br>
                     Men Companions: Denys Borschivskyi,
-                    Ivan Landin, João Silva, Márcio Pires, 
+                    Ivan Landin, João Silva, Márcio Pires,
                     Otílio Silva, Ruben Barros, Sorin Dorot
                     <br>
                     <br>
@@ -160,21 +164,25 @@
                     Youth Z: Bacari Djau, Bruno Carvalho,
                     Domingos Pereira, Edgar Campos,
                     Emerson Teta, Janathan Trabulo,
-                    Shairon Novela</p>
+                    Shairon Novela
+                </p>
             </div>
         </div>
         <div class="grid">
-        <div class="imageWork">
-            <img src="assets/data/work/concerto_opera_traction_gulbenkian_foto_joaquim_damaso_ (233).jpg">
-            <div class="creditPhotoWork"><p>Photo: Joaquim Dâmaso</p></div>
+            <div class="imageWork">
+                <img src="assets/data/work/concerto_opera_traction_gulbenkian_foto_joaquim_damaso_ (233).jpg">
+                <div class="creditPhotoWork">
+                    <p>Photo: Joaquim Dâmaso</p>
+                </div>
+            </div>
+
         </div>
-        
-    </div>
 
 
     </main>
 
     <script src="assets/js/mobileHeight.js"></script>
+    <script src="assets/js/audioWork.js"></script>
     <script src="assets/js/menu.js"></script>
 
 </body>
