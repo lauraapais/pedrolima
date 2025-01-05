@@ -260,7 +260,6 @@ header {
 /*Agenda*/
 .agendaFilters {
   position: fixed;
-  z-index: -1;
 }
 
 .agendaItems {
@@ -328,7 +327,6 @@ header {
 .fixedWork {
   grid-column: 1 / span 2;
   position: fixed;
-  z-index: -1;
 }
 
 .fixedAudio {
@@ -340,11 +338,14 @@ header {
   bottom: var(--marginDesktop);
   display: flex;
   justify-content: space-between;
-  z-index: -1;
 }
 
 .fixedAudio h1 {
   width: max-content;
+}
+
+#playButton{
+  cursor: pointer;
 }
 
 .creditPhotoWork {
