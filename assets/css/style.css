@@ -215,8 +215,7 @@ header {
 
 #menu.open .menuContent {
   top: 50%;
-  translate: 0, -50%;
-  /*transform: translate(0, -50%);*/
+  transform: translate(0, -50%);
   z-index: 901;
 }
 
@@ -260,8 +259,60 @@ header {
   grid-column: 12 / span 1;
 }
 
-@media only screen and (max-width: 700px) {
 
+/*Selected Work*/
+.projectWork{
+  grid-column: 3 / span 5;
+}
+
+.categoryWork{
+  grid-column: 8 / span 3;
+}
+
+.durationWork{
+  grid-column: 11 / span 1;
+}
+
+.yearWork{
+  grid-column: 12 / span 1;
+}
+
+.gapGrid{
+  grid-column: 1 / span 11;
+}
+
+
+.workMain{
+  grid-column: 3 / span 6;
+}
+.workDescription{
+  grid-column: 10 / span 3;
+}
+
+.mainImage img{
+width:100%;
+margin-top: calc(100vh / 6);
+}
+
+.imageWork{
+  grid-column: 8 / span 5;
+  margin-top: calc(100vh / 12);
+}
+
+.imageWork img{
+  width:100%;
+}
+
+.fixedWork{
+  position: fixed;
+}
+
+.creditPhotoWork{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: calc(15px + 0.390625vw);
+}
+@media only screen and (max-width: 700px) {
   /* Header */
   .headerLogo {
     grid-column: 1 / span 4;
