@@ -10,6 +10,7 @@
   src: url("folder/data/font/Neue_Haas_Grotesk_Text_Pro.otf") format("opentype");
   font-weight: normal;
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 * {
   margin: 0;
@@ -48,6 +49,13 @@ a {
   color: var(--black);
   transition: all 0.5s ease;
   cursor: pointer;
+}
+
+.mono{
+  font-family: "Roboto Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .alignRight {
@@ -304,7 +312,23 @@ margin-top: calc(100vh / 6);
 }
 
 .fixedWork{
+  grid-column: 1 / span 2;
   position: fixed;
+  z-index: -1;
+}
+
+.fixedAudio{
+  grid-column: 1 / span 2;
+  position: fixed;
+  width:calc( (100vw - var(--marginDesktop)*2) / 12 * 2 - (var(--marginDesktop) / 2));
+  bottom: var(--marginDesktop);
+  display: flex;
+    justify-content: space-between;
+    z-index: -1;
+}
+
+.fixedAudio h1{
+  width: max-content;
 }
 
 .creditPhotoWork{
@@ -312,6 +336,63 @@ margin-top: calc(100vh / 6);
   justify-content: flex-end;
   margin-top: calc(15px + 0.390625vw);
 }
+
+
+/*Discography*/
+.projectDiscography{
+  grid-column: 3 / span 4;
+}
+
+.typeDiscography{
+  grid-column: 7 / span 2;
+}
+
+.categoryDiscography{
+  grid-column: 9 / span 2;
+}
+
+.formatDiscography{
+  grid-column: 11 / span 1;
+}
+
+.yearDiscography{
+  grid-column: 12 / span 1;
+}
+
+.discographyMain{
+  grid-column: 3 / span 4;
+}
+.track{
+  margin-bottom: calc(15px + 0.390625vw);
+}
+
+.discoTitle{
+  margin-bottom: calc((15px + 0.390625vw) * 2);
+}
+
+.listen, .shop{
+  margin-top: calc(100vh / 12);
+}
+
+.listen{
+  grid-column: 3 / span 1;
+}
+
+.shop{
+  grid-column: 4 / span 1;
+}
+
+.imageDisco{
+  width: calc( (100vw - var(--marginDesktop)*2) / 12 * 4 - (var(--marginDesktop)));
+  position: absolute;
+  bottom: var(--marginDesktop);
+  right: var(--marginDesktop);
+}
+
+.imageDisco img{
+  width:100%;
+}
+
 @media only screen and (max-width: 700px) {
   /* Header */
   .headerLogo {
