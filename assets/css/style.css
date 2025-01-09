@@ -88,6 +88,7 @@ header {
 
 .headerLogo {
   grid-column: 1 / span 2;
+width: max-content;
 }
 
 .navSelect {
@@ -110,31 +111,37 @@ header {
   margin-top: calc(100vh / 6);
 }
 
-.imageAbout-main {
+.imageAbout-main{
   grid-column: 3 / span 6;
 }
 
-.imageAbout-main img {
-  width: 100%;
+
+.aboutImageContainer:nth-child(odd)  .imageAbout{
+  grid-column: 8 / span 5;
+  order:2;
 }
 
-.aboutImageContainer:first-child {
-  grid-column: 3;
+.aboutImageContainer:nth-child(even) .imageAbout{
+  grid-column: 3 / span 5;
+  order:1;
 }
 
-.imageAbout_description {
-  grid-column: span 3;
+
+
+.aboutImageContainer:nth-child(odd) .imageAbout_description{
+  grid-column: 3 / span 3;
   display: flex;
   align-items: flex-end;
+  order:1;
 }
 
-.gapAbout {
-  grid-column: span 2;
+.aboutImageContainer:nth-child(even)  .imageAbout_description{
+  grid-column: 10 / span 3;
+  display: flex;
+  align-items: flex-end;
+  order:2;
 }
 
-.imageAbout {
-  grid-column: span 5;
-}
 
 .imageAbout img {
   width: 100%;
@@ -210,6 +217,7 @@ header {
 }
 
 .menuContent {
+  display: none;
   position: relative;
   z-index: 901;
   top: 0;
@@ -315,10 +323,25 @@ header {
   margin-top: calc(100vh / 6);
 }
 
+.mainImageMobile{
+  display: none;
+}
+
 .imageWork {
   grid-column: 8 / span 5;
   margin-top: calc(100vh / 12);
 }
+
+.imageWork:nth-child(even){
+  grid-column: 8 / span 5;
+  margin-top: calc(100vh / 12);
+}
+
+.imageWork:nth-child(odd){
+  grid-column: 3 / span 6;
+  margin-top: calc(100vh / 12);
+}
+
 
 .imageWork img {
   width: 100%;
@@ -409,7 +432,7 @@ header {
   grid-column: 9 / span 2;
 }
 
-.formatDiscography {
+.publisherDiscography {
   grid-column: 11 / span 1;
 }
 
@@ -459,6 +482,19 @@ header {
 }
 
 @media only screen and (max-width: 700px) {
+  h1 {
+    font-size: calc(13px + 0.390625vw);
+    line-height: calc(17px + 0.390625vw);
+    font-family: "Neue Haas Grotesk Text Pro", sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+  
+  p {
+    font-size: calc(13px + 0.390625vw);
+    line-height: calc(17px + 0.390625vw);
+  }
+  
   /* Header */
   .headerLogo {
     grid-column: 1 / span 4;
@@ -472,9 +508,231 @@ header {
     grid-column: 12 / span 4;
     width: max-content;
   }
+
+  /*Agenda*/
+  .agendaFilters {
+    position: initial;
+    grid-column: 1 / span 8;
+    margin-bottom: 8vh;
 }
 
-/* MENU FABIO */
+.agendaFilters h1{
+  width:max-content;
+}
+.dateAgenda {
+  grid-column: 1 / span 3;
+}
+
+.projectAgenda{
+  grid-column: 4 / span 9;
+}
+
+.locationAgenda{
+  display: none;
+}
+
+.categoryAgenda{
+  display: none;
+}
+
+.gapGrid{
+  display: none;
+}
+
+/*Discography*/
+.projectDiscography{
+  grid-column: 1 / span 8;
+}
+
+.typeDiscography{
+  display: none;
+}
+
+.categoryDiscography{
+  display: none;
+}
+
+.itemImage{
+  display: none;
+}
+
+.publisherDiscography{
+  grid-column: 8 / span 3;
+}
+
+.yearDiscography{
+  grid-column: 11 / span 2;
+}
+
+/*Selected work*/
+.projectWork{
+  grid-column: 1 / span 6;
+}
+
+.categoryWork{
+  grid-column: 7 / span 4;
+}
+
+.durationWork{
+  display: none;
+}
+
+.yearWork{
+  grid-column: 11 / span 2;
+}
+
+/*selected work single*/
+.fixedWork{
+  grid-column: 1 / span 12;
+  margin-bottom: 8vh;
+  position: initial;
+}
+
+.fixedWork h1{
+  width: max-content;
+}
+
+.fixedAudio{
+  position: fixed;
+  width: calc(100vw);
+  bottom: 0;
+  left:0;
+  transform-origin: center;
+background-color: var(--bg-color);
+
+}
+
+.fixedAudio h1{
+  padding: calc(var(--marginDesktop) * 1.5);
+}
+
+.workMain{
+  grid-column: 1 / span 12;
+}
+
+.workDescription{
+  grid-column: 1 / span 12;
+}
+
+.mainImage{
+  display: none;
+}
+
+.mainImageMobile{
+  display: block;
+  margin-top:8vh;
+}
+
+.mainImageMobile{
+  grid-column: 1 / span 12;
+}
+
+.mainImageMobile img{
+  width:100%;
+}
+
+.imageWork:nth-child(even){
+  grid-column: 4 / span 9;
+}
+
+.imageWork:nth-child(odd){
+  grid-column: 1 / span 12;
+}
+
+
+
+/*Discography single*/
+.discographyMain{
+  grid-column: 1 / span 12;
+}
+
+.listen{
+  grid-column: 1 / span 3;
+  margin-top:8vh;
+}
+
+.shop{
+  grid-column: 4 / span 3;
+  margin-top:8vh;
+}
+
+.imageDisco {
+  grid-column: 1 / span 12;
+  position: initial;
+  z-index: -1;
+}
+
+.imageDisco img{
+  grid-column: 1 / span 12;
+  margin-top:4vh;
+}
+
+/*about*/
+.aboutInfo{
+  grid-column: 1 / span 12;
+}
+
+.aboutContainer{
+  margin-top:8vh;
+}
+
+.imageAbout-main{
+  grid-column: 1 / span 12;
+}
+
+.imageAbout-main img{
+  width:100%;
+}
+
+.gapAbout{
+  display: none;
+}
+
+
+
+.imageAbout_description{
+  grid-column: 1 / span 12;
+  margin-bottom:4vh;
+}
+
+.aboutImageContainer:nth-child(odd) .imageAbout{
+  grid-column: 4 / span 9;
+}
+
+.aboutImageContainer:nth-child(even) .imageAbout{
+  grid-column: 1 / span 9;
+  order:2;
+}
+
+.imageAbout_description{
+  grid-column: 1 / span 12;
+}
+
+.aboutImageContainer:nth-child(even)  .imageAbout_description{
+  grid-column: 1 / span 12;
+  order:1;
+}
+
+.aboutImageContainer:nth-child(odd)  .imageAbout_description{
+  grid-column: 1 / span 12;
+}
+
+/*contact*/
+.contactInfo{
+  grid-column: 1 / span 12;
+}
+
+.socialMedia{
+  margin-top: calc((17px + 0.390625vw)*2);
+  grid-column: 1 / span 12;
+}
+
+
+}
+
+
+
+/* MENU FABIO 
 
 .menuHeader h1:not(.menuSelect) {
   max-height: 0;
@@ -486,3 +744,4 @@ header {
   max-height: 100%;
   overflow: hidden;
 }
+*/
