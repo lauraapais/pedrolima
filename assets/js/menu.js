@@ -6,10 +6,10 @@ document.getElementById('menuOpen').addEventListener('click', function() {
     menu.classList.toggle('open');
 
     if (menu.classList.contains('open')) {
-        navSelect.style.opacity = '0';
+        navSelect.classList.add("blur");
         menuOpenButton.textContent = 'Fechar';
     } else {
-        navSelect.style.opacity = '1';
+        navSelect.classList.remove("blur");
         menuOpenButton.textContent = 'Menu';
     }
 });
