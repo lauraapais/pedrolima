@@ -68,10 +68,7 @@ a {
 
 main {
   margin-top: 23vh;
-  min-height: calc(
-    calc(var(--vh, 1vh) * 100) - 23vh -
-      var(--marginDesktop)
-  );
+  min-height: calc(calc(var(--vh, 1vh) * 100) - 23vh - var(--marginDesktop));
 }
 
 #indexBody * {
@@ -289,8 +286,8 @@ body#indexBody {
   transition: opacity ease 800ms;
 }
 
-.language h1{
-  cursor:pointer;
+.language h1 {
+  cursor: pointer;
 }
 
 #menu.open .language {
@@ -306,9 +303,9 @@ body#indexBody {
   margin-top: calc(15px + 0.390625vw);
 }
 
-#mainAgenda .agendaItems:hover{
-  color:var(--black)!important;
-  cursor:auto;
+#mainAgenda .agendaItems:hover {
+  color: var(--black) !important;
+  cursor: auto;
 }
 
 .dateAgenda {
@@ -453,6 +450,7 @@ body#indexBody {
   bottom: var(--marginDesktop);
   display: flex;
   justify-content: space-between;
+  z-index: 2;
 }
 
 .fixedAudio h1 {
@@ -556,7 +554,7 @@ body#indexBody {
   grid-column: 4 / span 1;
 }
 
-.workTitle{
+.workTitle {
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
@@ -579,6 +577,10 @@ body#indexBody {
 }
 
 @media only screen and (max-width: 700px) {
+  body {
+
+    margin: calc(var(--marginDesktop) * 2);
+  }
   h1 {
     font-size: 16px;
     line-height: 18px;
@@ -592,7 +594,7 @@ body#indexBody {
     line-height: 18px;
   }
 
-  main{
+  main {
     margin-top: 7rem;
     overflow-x: hidden;
   }
@@ -690,7 +692,7 @@ body#indexBody {
   /*selected work single*/
   .fixedWork {
     grid-column: 1 / span 12;
-    margin-bottom:3rem;
+    margin-bottom: 3rem;
     position: initial;
   }
 
@@ -701,7 +703,7 @@ body#indexBody {
   .fixedAudio {
     position: fixed;
     width: calc(100vw);
-    bottom: calc(100vh - var(--vh, 1vh) * 100);
+    bottom: 0;
     left: 0;
     transform-origin: center;
     background-color: var(--bg-color);

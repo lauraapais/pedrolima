@@ -66,7 +66,7 @@ const walls = [
 ];
 Composite.add(world, walls);
 
-// Function to create a new box with a random image resized to fit within given dimensions and random rotation
+// Function to create a new box with a random image resized to fit within given dimensions
 function createBox(x, y, maxWidth, maxHeight) {
   const randomIndex = Math.floor(Math.random() * images.length);
   const randomImage = images.splice(randomIndex, 1)[0]; // Remove the used image from the array
@@ -85,13 +85,10 @@ function createBox(x, y, maxWidth, maxHeight) {
           yScale: height / originalDimensions.height,
         },
       },
-      angle: (Math.random() - 0.5) * Math.PI, // Random initial rotation within ±90 degrees
     });
     Composite.add(world, box);
   });
 }
-
-
 
 // Function to create a new text with random content and exact size
 function createText(x, y) {
