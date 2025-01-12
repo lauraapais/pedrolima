@@ -1,8 +1,86 @@
+<!DOCTYPE html>
+<html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
- 
+
     <title>Pedro Lima</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <script src="assets/js/aos.js"></script>
 </head>
+
+<body id="indexBody">
+    <div id="menu">
+        <div class="menuBackground"></div>
+        <div class="grid menuContent">
+            <div class="menuHeader">
+                <a href="about.html">
+                    <h1 class="rot">About</h1>
+                </a>
+                <a href="agenda.html">
+                    <h1 class="rot">Agenda</h1>
+                </a>
+                <a href="selected-work.html">
+                    <h1 class="rot">Selected Work</h1>
+                </a>
+                <a href="discography.html">
+                    <h1 class="rot">Discography</h1>
+                </a>
+                <a href="contact.html">
+                    <h1 class="rot">Contact</h1>
+                </a>
+            </div>
+
+        </div>
+        <div class="language">
+            <h1 class="rot">PT</h1>
+            <h1>/</h1>
+            <h1 class="rot">EN</h1>
+        </div>
+
+    </div>
+
+    <header id="headerMenuIndex" class="grid">
+        <h1 class="headerLogo rot" onclick="location.href='index.html'">Pedro Lima</h1>
+        <div class="menuContainer">
+            <h1 id="menuClose" class="rot">Fechar</h1>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="grid headerIndex">
+            <h1 class="headerLogo rot" onclick="location.href='index.html'">Pedro Lima</h1>
+            <h1>Composer</h1>
+            <div class="menuContainer">
+                <h1 id="menuOpenIndex" class="rot">Menu</h1>
+            </div>
+        </div>
+    </main>
+
+    <div id="cursor">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.854 12.854">
+            <g id="Grupo_23" data-name="Grupo 23" transform="translate(-1344.618 -300.626)">
+                <line id="Linha_17" data-name="Linha 17" x2="12" y2="12" transform="translate(1345.118 301.126)"
+                    fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1" />
+                <path id="Caminho_679" data-name="Caminho 679" d="M1345.118,308.788v-7.662h7.662" fill="none"
+                    stroke="#000" stroke-miterlimit="10" stroke-width="1" />
+            </g>
+        </svg>
+
+        <h1 class="mono">Click</h1>
+    </div>
+
+    <script src="assets/js/mobileHeight.js"></script>
+    <script src="assets/js/menuIndex.js"></script>
+    <script src="assets/js/cursor.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

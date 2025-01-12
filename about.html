@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
- 
+
     <title>Pedro Lima</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <script src="assets/js/aos.js"></script>
 </head>
 
 <body>
@@ -43,7 +45,7 @@
 
     <header class="grid">
         <h1 class="headerLogo rot" onclick="location.href='index.html'">Pedro Lima</h1>
-        <h1 class="navSelect">About</h1> 
+        <h1 class="navSelect">About</h1>
         <div class="menuContainer">
             <h1 id="menuOpen" class="rot">Menu</h1>
         </div>
@@ -56,23 +58,29 @@
                 <p>Pedro Lima has proven to be one of the most active, challenging, and relevant voices in the context
                     of contemporary national and international music.</p>
                 <br>
-                His music seeks to explore sound universes that are unique to an eclectic background, influenced by
-                someone who grew up listening to electronic music, hip-hop, and was part of a progressive rock band
-                during his development. "Erudite" composition has revealed itself as a blank canvas of perfect
-                dimensions, where a series of timbral, harmonic, and structural "investigations" have materialized. His
-                scores manifest singular and extravagant ideas that take on different forms and expressions, depending
-                on the context in which they wish to exist.</p>
+                <p>His music seeks to explore sound universes that are unique to an eclectic background, influenced by
+                    someone who grew up listening to electronic music, hip-hop, and was part of a progressive rock band
+                    during his development. "Erudite" composition has revealed itself as a blank canvas of perfect
+                    dimensions, where a series of timbral, harmonic, and structural "investigations" have materialized.
+                    His
+                    scores manifest singular and extravagant ideas that take on different forms and expressions,
+                    depending
+                    on the context in which they wish to exist.</p>
                 <br>
-                The music of the Portuguese composer has evolved through the contrasting projects he has created and
-                participated in. From opera to electronic music, including community projects and various fusion
-                experiments, it becomes redundant to try to label such a singular voice that has emancipated itself
-                primarily through versatility. A composer who thrives in the complex socio-digital environment in which
-                we live.</p>
+                <p>
+                    The music of the Portuguese composer has evolved through the contrasting projects he has created and
+                    participated in. From opera to electronic music, including community projects and various fusion
+                    experiments, it becomes redundant to try to label such a singular voice that has emancipated itself
+                    primarily through versatility. A composer who thrives in the complex socio-digital environment in
+                    which
+                    we live.</p>
             </div>
         </div>
         <div class="grid aboutContainer">
             <div class="imageAbout-main">
-                <img src="assets/data/about/about1.jpg">
+                <img src="assets/data/about/about1.jpg"
+                data-aos="fade-up" data-aos-offset="200"
+                data-aos-duration="1000">
             </div>
         </div>
         <div class="grid aboutContainer aboutImageContainer">
@@ -83,7 +91,9 @@
                     dolor in hendrerit in </p>
             </div>
             <div class="imageAbout">
-                <img src="assets/data/about/about2.jpg">
+                <img src="assets/data/about/about2.jpg"
+                data-aos="fade-left" data-aos-offset="200"
+                data-aos-duration="1000">
             </div>
         </div>
 
@@ -95,14 +105,17 @@
                     dolor in hendrerit in </p>
             </div>
             <div class="imageAbout">
-                <img src="assets/data/about/about2.jpg">
+                <img src="assets/data/about/about2.jpg" data-aos="fade-right" data-aos-offset="200"
+                data-aos-duration="1000">
             </div>
         </div>
     </main>
 
     <script src="assets/js/mobileHeight.js"></script>
     <script src="assets/js/menu.js"></script>
-
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
