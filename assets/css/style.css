@@ -30,7 +30,7 @@ body {
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-gap: calc(var(--marginDesktop) / 2);
+  grid-gap: calc(var(--marginDesktop));
 }
 
 h1 {
@@ -628,7 +628,7 @@ body#indexBody {
 
   /*Discography*/
   .projectDiscography {
-    grid-column: 1 / span 8;
+    grid-column: 1 / span 7;
   }
 
   .typeDiscography {
