@@ -621,6 +621,11 @@ body#indexBody {
     width: max-content;
   }
 
+  .language {
+    bottom: calc(var(--marginDesktop) * 2);
+    right: calc(var(--marginDesktop) * 2);
+  }
+
   /*Agenda*/
   .agendaFilters {
     position: initial;
@@ -758,12 +763,12 @@ body#indexBody {
 
   .listen {
     grid-column: 1 / span 3;
-    margin-top: 8vh;
+    margin-top: 4rem;
   }
 
   .shop {
     grid-column: 4 / span 3;
-    margin-top: 8vh;
+    margin-top: 4rem;
   }
 
   .imageDisco {
