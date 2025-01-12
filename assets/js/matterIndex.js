@@ -66,7 +66,7 @@ const walls = [
 ];
 Composite.add(world, walls);
 
-// Function to create a new box with a random image resized to fit within given dimensions
+// Function to create a new box with a random image resized to fit within given dimensions and random rotation
 function createBox(x, y, maxWidth, maxHeight) {
   const randomIndex = Math.floor(Math.random() * images.length);
   const randomImage = images.splice(randomIndex, 1)[0]; // Remove the used image from the array
@@ -85,10 +85,13 @@ function createBox(x, y, maxWidth, maxHeight) {
           yScale: height / originalDimensions.height,
         },
       },
+      angle: (Math.random() - 0.5) * Math.PI, // Random initial rotation within ±90 degrees
     });
     Composite.add(world, box);
   });
 }
+
+
 
 // Function to create a new text with random content and exact size
 function createText(x, y) {
@@ -124,8 +127,8 @@ render.mouse = mouse;
 document.addEventListener("mousedown", function (event) {
   const x = event.clientX;
   const y = event.clientY;
-  const maxWidth = 200; // Maximum width for the images
-  const maxHeight = 200; // Maximum height for the images
+  const maxWidth = 300; // Maximum width for the images
+  const maxHeight = 300; // Maximum height for the images
 
   // Check if there are any items left to add
   if (images.length === 0 && texts.length === 0) {
@@ -140,8 +143,9 @@ document.addEventListener("mousedown", function (event) {
 });
 
 const images = [
-  { src: "assets/img/384.png" },
-  { src: "assets/img/025_f2.png" },
+  { src: "assets/data/work/concerto_opera_traction_gulbenkian_foto_joaquim_damaso_ (233).jpg" },
+  { src: "assets/data/about/about1.jpg" },
+  { src: "assets/data/about/about2.jpg" },
   // Add more images as needed
 ];
 
