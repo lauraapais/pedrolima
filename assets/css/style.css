@@ -695,7 +695,7 @@ body#indexBody {
   .fixedAudio {
     position: fixed;
     width: calc(100vw);
-    top: calc(var(--vh, 1vh) * 100);
+    bottom: calc(100vh - var(--vh, 1vh) * 100);
     left: 0;
     transform-origin: center;
     background-color: var(--bg-color);
