@@ -584,7 +584,7 @@ body#indexBody {
   }
 
   .headerLogo {
-    grid-column: 1 / span 4;
+    grid-column: 1 / span 5;
   }
 
   .navSelect {
