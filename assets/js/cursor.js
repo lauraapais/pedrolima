@@ -4,3 +4,5 @@
             cursorDiv.style.left = event.clientX + 'px';
             cursorDiv.style.top = event.clientY + 'px';
         });
+
+      

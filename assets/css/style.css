@@ -125,6 +125,11 @@ body#indexBody {
   cursor: none;
 }
 
+#menu.open *{
+  cursor:auto;
+}
+
+
 
 #headerMenuIndex{
   opacity: 0;
@@ -836,5 +841,9 @@ body#indexBody {
   display: flex;
       gap: 0.5rem;
       align-items: baseline;
+}
+
+#cursor.activeCursor{
+  display:none;
 }
 
