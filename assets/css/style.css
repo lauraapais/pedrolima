@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
 :root {
   --bg-color: #ffffff;
@@ -67,8 +67,11 @@ a {
 }
 
 main {
-  margin-top: calc(calc(var(--vh, 1vh) * 100) / 6);
-  min-height: calc(calc(var(--vh, 1vh) * 100) - calc(calc(var(--vh, 1vh) * 100) / 6) - var(--marginDesktop));
+  margin-top: 23vh;
+  min-height: calc(
+    calc(var(--vh, 1vh) * 100) - 23vh -
+      var(--marginDesktop)
+  );
 }
 
 #indexBody * {
@@ -117,26 +120,22 @@ header {
 }
 
 /*Index*/
-#headerMenuIndex.open{
+#headerMenuIndex.open {
   opacity: 1;
-
 }
 
 body#indexBody {
   cursor: none;
 }
 
-#menu.open *{
-  cursor:auto;
+#menu.open * {
+  cursor: auto;
 }
 
-
-
-#headerMenuIndex{
+#headerMenuIndex {
   opacity: 0;
   transition: opacity 0.5s ease;
 }
-
 
 /*About*/
 .aboutInfo {
@@ -276,6 +275,7 @@ body#indexBody {
 
 .menuHeader h1 {
   width: max-content;
+  cursor: pointer !important;
 }
 
 .language {
@@ -289,6 +289,10 @@ body#indexBody {
   transition: opacity ease 800ms;
 }
 
+.language h1{
+  cursor:pointer;
+}
+
 #menu.open .language {
   opacity: 1;
 }
@@ -300,6 +304,11 @@ body#indexBody {
 
 .agendaItems {
   margin-top: calc(15px + 0.390625vw);
+}
+
+#mainAgenda .agendaItems:hover{
+  color:var(--black)!important;
+  cursor:auto;
 }
 
 .dateAgenda {
@@ -399,7 +408,7 @@ body#indexBody {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
-  width: calc(100vw - var(--marginDesktop)* 2);
+  width: calc(100vw - var(--marginDesktop) * 2);
 }
 
 .mainImage img {
@@ -578,6 +587,10 @@ body#indexBody {
     line-height: 18px;
   }
 
+  main{
+    margin-top: 8rem;
+  }
+
   /* Header */
   .menuHeader {
     gap: calc(var(--marginDesktop) * 4);
@@ -600,7 +613,7 @@ body#indexBody {
   .agendaFilters {
     position: initial;
     grid-column: 1 / span 8;
-    margin-bottom: 8vh;
+    margin-bottom: 2.5rem;
   }
 
   .agendaFilters h1 {
@@ -824,26 +837,30 @@ body#indexBody {
 }
 */
 
-
-
-#cursor svg{
+#cursor svg {
   height: 0.8rem;
-    width: auto;
+  width: auto;
 }
 
-#cursor h1{
+#cursor h1 {
   font-size: 16px;
 }
 
-#cursor{
+#cursor {
   position: fixed;
   pointer-events: none;
   display: flex;
-      gap: 0.5rem;
-      align-items: baseline;
+  gap: 0.5rem;
+  align-items: baseline;
 }
 
-#cursor.activeCursor{
-  display:none;
+#cursor.activeCursor {
+  display: none;
 }
 
+#world {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
