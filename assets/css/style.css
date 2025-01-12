@@ -67,8 +67,8 @@ a {
 }
 
 main {
-  margin-top: calc(100vh / 6);
-  min-height: calc(100vh - calc(100vh / 6) - var(--marginDesktop));
+  margin-top: calc(calc(var(--vh, 1vh) * 100) / 6);
+  min-height: calc(calc(var(--vh, 1vh) * 100) - calc(calc(var(--vh, 1vh) * 100) / 6) - var(--marginDesktop));
 }
 
 #indexBody * {
@@ -216,7 +216,7 @@ body#indexBody {
   top: 0;
   left: 0;
   width: calc(100vw - var(--marginDesktop) * 2);
-  height: calc(100vh - var(--marginDesktop) * 2);
+  height: calc(calc(var(--vh, 1vh) * 100) - var(--marginDesktop) * 2);
   padding: var(--marginDesktop);
   pointer-events: none;
 }
@@ -239,7 +239,7 @@ body#indexBody {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: calc(var(--vh, 1vh) * 100);
   z-index: 900;
 }
 
@@ -349,7 +349,7 @@ body#indexBody {
 }
 
 .workDescription .content {
-  max-height: 100vh;
+  max-height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
   position: relative;
   transition: max-height 0.5s ease;
@@ -357,7 +357,7 @@ body#indexBody {
 
 .workDescription.open .content,
 .workDescription.small .content {
-  max-height: 1000vh;
+  max-height: calc(var(--vh, 1vh) * 1000);
 }
 
 .workDescription .blockRead {
@@ -536,7 +536,7 @@ body#indexBody {
 
 .listen,
 .shop {
-  margin-top: calc(100vh / 12);
+  margin-top: calc(calc(var(--vh, 1vh) * 100) / 12);
 }
 
 .listen {
