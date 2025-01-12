@@ -556,6 +556,11 @@ body#indexBody {
   grid-column: 4 / span 1;
 }
 
+.workTitle{
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
 .imageDisco {
   position: absolute;
   z-index: -1;
@@ -589,6 +594,7 @@ body#indexBody {
 
   main{
     margin-top: 7rem;
+    overflow-x: hidden;
   }
 
   /* Header */
@@ -613,7 +619,7 @@ body#indexBody {
   .agendaFilters {
     position: initial;
     grid-column: 1 / span 8;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
   }
 
   .agendaFilters h1 {
@@ -684,7 +690,7 @@ body#indexBody {
   /*selected work single*/
   .fixedWork {
     grid-column: 1 / span 12;
-    margin-bottom: 8vh;
+    margin-bottom:3rem;
     position: initial;
   }
 
@@ -711,6 +717,7 @@ body#indexBody {
 
   .workDescription {
     grid-column: 1 / span 12;
+    margin-top: 1rem;
   }
 
   .mainImage {
