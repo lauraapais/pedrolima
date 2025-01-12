@@ -90,7 +90,7 @@ header {
   position: fixed;
   top: var(--marginDesktop);
   z-index: 901;
-  width: calc(100vw - var(--marginDesktop) * 2);
+  width: calc(100vw - var(--marginDesktop) * 4);
 }
 
 .headerLogo {
